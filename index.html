@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai tap kiem tra doi xung</title>
+</head>
+<body>
+<script>
+    let input=prompt("Nhap tu can kiem tra");
+    function isPalindrome(str)
+    {
+        let arr=[];
+        for (let i=0; i<str.length; i++)
+        {
+            arr[i]=str.charAt(i);
+        }
+        let first=0;
+        let last=arr.length-1;
+        let count=0;
+        while(first<last)
+        {
+            if (arr[first]===arr[last])
+            {
+                count++;
+            }
+            first++;
+            last--;
+        }
+        if (count==parseInt(arr.length/2))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    document.write(isPalindrome(input));
+</script>
+</body>
+</html>
